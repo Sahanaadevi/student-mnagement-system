@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎓 Student Management System</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2 id="form-title">Add Student</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id" />
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Full name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="name@example.com" required />
+        </div>
+
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" id="age" placeholder="Age" min="1" max="120" required />
+        </div>
+
+        <div class="field">
+          <label for="course">Course</label>
+          <input type="text" id="course" placeholder="e.g. Computer Science" required />
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="submit-btn" class="btn primary">Add Student</button>
+          <button type="button" id="cancel-btn" class="btn secondary hidden">Cancel</button>
+        </div>
+      </form>
+      <p id="message" class="message"></p>
+    </section>
+
+    <section class="card">
+      <h2>Students</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Course</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="student-table-body"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty hidden">No students found. Add one above.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
